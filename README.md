@@ -3,7 +3,7 @@ Bowling Game Kata
 
 ### Naming Convention
 
-"Pins": Valores de cada una de las tiradas.
+"Pin": Bolos tirados en cada roll.
 
 "Roll": Lanzamiento de bola.
 
