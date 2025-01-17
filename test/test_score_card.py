@@ -22,3 +22,14 @@ def test_calculate_miss():
     total = 90
     card = ScoreCard(pins)
     assert total == card.calculate_total()
+
+    pins = "9-3561368153258-7181"
+    total = 82
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+    
+def test_spare():
+    pins = "9-3/613/815/-/8-7/8-"
+    total = 121
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()

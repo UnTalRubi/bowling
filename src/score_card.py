@@ -5,6 +5,7 @@ class ScoreCard():
     
     def __decoder_pins__(self):
         self.pins = self.pins.replace("-","0")
+        self.pins = self.pins.replace()
 
     def card(self):
         return ScoreCard
@@ -18,4 +19,3 @@ class ScoreCard():
         for pin in self.pins:
             total_score += int(pin)
         return total_score
-    
