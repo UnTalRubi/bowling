@@ -1,5 +1,7 @@
 {
     "conventionalCommits.scopes": [
-        "BOWLING"
+        "BOWLING",
+        "TESTS",
+        "SCORE_CARD"
     ]
 }
