@@ -2,11 +2,18 @@ import pytest
 from src.score_card import ScoreCard
 
 def test_check_card():
-    PINS = "12345123451234512345"
-    card = ScoreCard(PINS)
+    pins = "12345123451234512345"
+    card = ScoreCard(pins)
     assert card
 
 def test_get_pins():
-    PINS = "12345123451234512345"
-    card = ScoreCard(PINS)
-    assert card.get_pins() == PINS
+    pins = "12345123451234512345"
+    card = ScoreCard(pins)
+    assert card.get_pins() == pins
+
+def test_calculate_total():
+    pins = "12345123451234512345"
+    total = 60
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+
