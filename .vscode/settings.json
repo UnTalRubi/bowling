@@ -3,5 +3,10 @@
         "BOWLING",
         "TESTS",
         "SCORE_CARD"
-    ]
+    ],
+    "python.testing.pytestArgs": [
+        "test"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
