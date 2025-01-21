@@ -44,3 +44,26 @@ def test_strike():
     total = 110
     card = ScoreCard(pins)
     assert total == card.calculate_total()
+
+def test_two_strike():
+    pins = "XX9-9-9-9-9-9-9-9-"
+    total = 120
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+
+def test_three_strike():
+    pins = "XXX9-9-9-9-9-9-9-"
+    total = 141
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+
+def test_one_pin_in_extra_roll():
+    pins = "9-3/613/815/-/8-7/8/8"
+    total = 131
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+
+    pins = "5/5/5/5/5/5/5/5/5/5/5"
+    total = 150
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
