@@ -41,6 +41,6 @@ def test_strike():
     assert total == card.calculate_total()
     
     pins = "X9-X9-9-9-9-9-9-9-"
-    total = 100
+    total = 110
     card = ScoreCard(pins)
     assert total == card.calculate_total()

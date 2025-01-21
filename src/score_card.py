@@ -16,11 +16,15 @@ class ScoreCard():
                 pin = self.ZERO
             elif pin == "/":
                 pin = self.TEN - self.pins_list[-1]
+            elif pin == "X":
+                pin = self.TEN
             self.pins_list.append(pin)
 
         for pos in range(len(self.pins)):
             if self.pins[pos] == "/":
                 self.pins_list[pos] += self.pins_list[pos + 1]
+            if self.pins[pos] == "X":
+                self.pins_list[pos] += self.pins_list[pos + 1] + self.pins_list[pos + 2]
 
         return self.pins_list
     
