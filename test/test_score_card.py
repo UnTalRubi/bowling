@@ -33,3 +33,14 @@ def test_spare():
     total = 121
     card = ScoreCard(pins)
     assert total == card.calculate_total()
+
+def test_strike():
+    pins = "X9-9-9-9-9-9-9-9-9-"
+    total = 100
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+    
+    pins = "X9-X9-9-9-9-9-9-9-"
+    total = 100
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
