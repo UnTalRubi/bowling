@@ -73,3 +73,21 @@ def test_two_strikes_in_extra_rolls():
     total = 111
     card = ScoreCard(pins)
     assert total == card.calculate_total()
+
+def test_one_strike_in_extra_roll():
+    pins = "8/549-XX5/53639/9/X"
+    total = 149
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+
+def test_spare_in_extra_roll():
+    pins = "X5/X5/XX5/--5/X5/"
+    total = 175
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
+
+def test_triple_strike_before_extra_rolls():
+    pins = "XXXXXXXXXXXX"
+    total = 300
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()
