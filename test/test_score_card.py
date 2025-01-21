@@ -67,3 +67,9 @@ def test_one_pin_in_extra_roll():
     total = 150
     card = ScoreCard(pins)
     assert total == card.calculate_total()
+
+def test_two_strikes_in_extra_rolls():
+    pins = "9-9-9-9-9-9-9-9-9-XXX"
+    total = 111
+    card = ScoreCard(pins)
+    assert total == card.calculate_total()

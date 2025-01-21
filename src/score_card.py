@@ -21,14 +21,11 @@ class ScoreCard():
             self.pins_list.append(pin)
 
         for pos in range(len(self.pins)):
-            if self.pins[pos] == "/":
+            if self.pins[pos] == "/" and pos + 2 < len(self.pins):
                 self.pins_list[pos] += self.pins_list[pos + 1]
-            if self.pins[pos] == "X":
+            if self.pins[pos] == "X" and pos + 3 < len(self.pins):
                 self.pins_list[pos] += self.pins_list[pos + 1] + self.pins_list[pos + 2]
-        
-        if self.pins[-2] == "/" or self.pins[-2] == "X":
-            self.pins_list.pop()
-        
+
         return self.pins_list
     
     def card(self):
